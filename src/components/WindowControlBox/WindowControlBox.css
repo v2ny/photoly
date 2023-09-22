@@ -1,0 +1,115 @@
+.window-control-bar-tauri-support
+{
+    max-width   : 100%;
+    min-width   : 100%;
+
+    min-height  : var(--window-control-box-height);
+    max-height  : var(--window-control-box-height);
+
+    background-color: var(--default-titlebar-color);
+
+    padding : 6px;
+
+    top     : 0;
+    left    : 0;
+    z-index : 90;
+
+    user-select         : none;
+    -webkit-user-drag   : none;
+    -webkit-user-select : none;
+
+    position        : absolute;
+}
+
+.window-control-bar
+{
+    min-width       : calc(100% + 12px);
+    
+    transform       : translate(-6px, 0);
+    
+    min-height      : var(--window-control-box-height);
+    max-height      : var(--window-control-box-height);
+
+    justify-content : space-between;
+    align-items     : center;
+
+    display         : flex;
+
+    position        : relative;
+}
+
+.window-control-bar .control-bar-button
+{
+    min-width   : var(--window-control-box-height);
+    max-width   : var(--window-control-box-height);
+
+    min-height  : var(--window-control-box-height);
+    max-height  : var(--window-control-box-height);
+
+    vertical-align: middle;
+
+    transition  : var(--quick-ease-duration);
+
+    transform   : translate(0, -6px);
+
+    user-select         : none;
+    -webkit-user-drag   : none;
+    -webkit-user-select : none;
+}
+
+.window-control-bar .control-bar-button.default-color:is(:hover, :focus-within)
+{
+    background-color: var(--lmlight-background-color);
+}
+
+.window-control-bar .control-bar-button.close-color:is(:hover, :focus-within)
+{
+    background-color: var(--window-control-box-close-color);
+}
+
+.window-control-bar .menu-item-button
+{
+    min-width   : max-content;
+    max-width   : max-content;
+
+    min-height  : calc(var(--window-control-box-height) - 18px);
+
+    padding      : 1px 8px;
+    border-radius: var(--minimum-radius);
+
+    background-color: transparent;
+
+    font-family: var(--font-family-base);
+    font-size       : 16px;
+
+    justify-content : center;
+    align-items     : center;
+    text-align      : center;
+    vertical-align  : middle;
+
+    margin-left: 8px;
+
+    transition  : var(--quick-ease-duration);
+
+    transform   : translate(0, -6px);
+
+    user-select         : none;
+    -webkit-user-drag   : none;
+    -webkit-user-select : none;
+
+    display             : inline-flex;
+}
+
+.window-control-bar .menu-item-button:first-child { margin-left: 12px; }
+
+.window-control-bar .menu-item-button:is(:hover, :focus-within)
+{
+    background-color: var(--lmlight-background-color);
+}
+
+.window-control-bar :is(img, span, p)
+{
+    user-select         : none;
+    -webkit-user-drag   : none;
+    -webkit-user-select : none;
+}

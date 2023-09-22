@@ -1,0 +1,33 @@
+::selection
+{
+    background-color: var(--default-app-accent-color);
+}
+
+::-webkit-scrollbar {
+    background-color : transparent;
+    min-width        : 8px;
+    max-width        : 8px;
+}
+
+::-webkit-scrollbar-track 
+{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track:hover 
+{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background-color : rgb(46, 46, 48);
+    border-radius    : 16px;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background-color: rgb(67, 67, 69);
+}
+
+::-webkit-scrollbar-button { display:none }

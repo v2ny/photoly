@@ -1,0 +1,112 @@
+{
+    "build": {
+        "beforeDevCommand": "yarn dev",
+        "beforeBuildCommand": "yarn build",
+        "devPath": "http://localhost:1420",
+        "distDir": "../dist",
+        "withGlobalTauri": false
+    },
+    "package": {
+        "productName": "Photoly",
+        "version": "0.0.0"
+    },
+    "tauri": {
+        "allowlist": {
+            "all": false,
+            "shell": {
+                "all": false,
+                "open": true
+            },
+            "window": {
+                "all": false,
+                
+                "close": true,
+                "hide": true,
+                "maximize": true,
+                "minimize": true,
+
+                "print": true,
+
+                "requestUserAttention": true,
+                "setClosable": true,
+
+                "setCursorGrab": true,
+                "setCursorIcon": true,
+                "setCursorVisible": true,
+                
+                "setMaximizable": true,
+                "setMinimizable": true,
+
+                "startDragging": true,
+                "unmaximize": true,
+                "unminimize": true
+            },
+            "fs": {
+                "all": false,
+
+                "exists": true,
+
+                "copyFile": true,
+
+                "createDir": true,
+                "writeFile": true,
+
+                "readDir": true,
+                "readFile": true,
+
+                "removeDir": true,
+                "removeFile": true,
+
+                "renameFile": true
+            },
+            "dialog": {
+                "all": true
+            }
+        },
+        "bundle": {
+            "active": true,
+            "targets": "all",
+            "identifier": "com.uvilc.photoly",
+            "icon": [
+                "icons/photoly.png",
+                "icons/photoly.ico"
+            ]
+        },
+        
+        "security": {
+            "csp": null,
+            "dangerousRemoteDomainIpcAccess": [
+                {
+                  "scheme": "https",
+                  "domain": "tauri.localhost",
+                  "windows": ["main"],
+                  "plugins": ["os", "event", "window"]
+                }
+            ]
+        },
+
+        "windows": [
+            {
+                "fullscreen": false,
+                "decorations": false,
+                "resizable": true,
+
+                "focus": true,
+
+                "maximizable": true,
+                "minimizable": true,
+                "closable": true,
+
+                "theme": "Dark",
+
+                "title": "Uvilc Photoly",
+
+                "width": 1280,
+                "height": 720,
+
+                "minWidth": 1140,
+                "minHeight": 720
+            }
+        ]
+    }
+}

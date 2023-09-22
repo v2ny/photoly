@@ -1,0 +1,25 @@
+[package]
+name = "photoly"
+version = "0.0.0"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.4", features = [] }
+
+[dependencies]
+tauri = { version = "1.4", features = [ "dialog-all", "fs-remove-file", "window-print", "fs-rename-file", "window-set-maximizable", "window-set-cursor-visible", "window-set-closable", "window-request-user-attention", "window-close", "fs-write-file", "fs-exists", "window-set-cursor-icon", "window-minimize", "window-hide", "window-unmaximize", "window-start-dragging", "fs-remove-dir", "window-maximize", "window-set-minimizable", "fs-read-dir", "window-set-cursor-grab", "fs-create-dir", "fs-copy-file", "window-unminimize", "fs-read-file", "shell-open"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+window-shadows = "0.2.1"
+open = "5.0.0"
+
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
