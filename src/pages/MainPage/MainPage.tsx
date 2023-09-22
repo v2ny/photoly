@@ -97,7 +97,7 @@ export class MainPage extends Component {
                     <InsideWindowModal 
                         Closeabe Draggable 
                         ModalName='New Project'
-                        Position={['15%', '15%']}
+                        Position={['10%', '10%']}
                         Content={
                             <div className='iwm-window'>
                                 <div className='first-preview-area'>
